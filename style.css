@@ -1,0 +1,22 @@
+h1{
+    color: #ae1f1f;
+    background-color: #c7d3d7;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+h2{
+    color: #1f4e79;
+    background-color: #d3e0ea;
+    font-family: 'Verdana', sans-serif;
+    text-align: center;
+}
+h3{
+    color: #395145;
+    background-color: #d3ead3;
+    font-family: 'Tahoma', sans-serif;
+    text-align: center;
+}
+p{
+    font-size:20px;
+    background-color: #f0f0f0;
+}
