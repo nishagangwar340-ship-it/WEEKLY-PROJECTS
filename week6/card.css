@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  color-scheme: light;
+  --ink: #20241f;
+  --paper: #f5f3ed;
+  --muted: #77796f;
+  --line: rgba(32, 36, 31, 0.16);
+  font-family: 'DM Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 68px;
+  padding: 0 clamp(20px, 6vw, 88px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(245, 243, 237, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  font-size: 19px;
+}
+
+.brand span {
+  color: #ea765e;
+}
+
+.top-bar nav {
+  display: flex;
+  gap: 28px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.top-bar nav a:hover,
+.card-footer a:hover {
+  color: #df674f;
+}
+
+.page-shell {
+  width: min(1080px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.intro {
+  padding: clamp(60px, 10vw, 124px) 0 58px;
+  max-width: 590px;
+}
+
+.eyebrow,
+.role,
+.bio-label,
+.card-topline,
+.card-number,
+.card-footer,
+.page-footer {
+  font: 500 10px/1.4 'DM Mono', monospace;
+  letter-spacing: 0.08em;
+}
+
+.eyebrow {
+  color: #e06d55;
+  margin: 0 0 20px;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.intro h1,
+.lesson h2 {
+  font: 600 clamp(46px, 7vw, 76px)/0.99 'Playfair Display', serif;
+  letter-spacing: -0.055em;
+}
+
+.intro-copy {
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 360px;
+  margin: 22px 0 0;
+  font-size: 14px;
+}
+
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+.profile-card {
+  --accent: #df755f;
+  --tint: #f3e2dc;
+  background: #fffdfa;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  padding: 24px;
+  box-shadow: 0 12px 35px rgba(36, 35, 29, 0.045);
+}
+
+.profile-card--blue {
+  --accent: #527d91;
+  --tint: #e1ebed;
+  background: #fbfdfc;
+}
+
+.card-topline {
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+}
+
+.card-number {
+  margin-left: auto;
+  font-size: 9px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  background: #89a678;
+  border-radius: 50%;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin: 29px 0 28px;
+}
+
+.avatar {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  border: 4px solid var(--tint);
+  object-fit: cover;
+}
+
+.role {
+  color: var(--accent);
+  margin: 0 0 5px;
+  font-size: 9px;
+}
+
+.identity h2 {
+  font: 600 27px/1.1 'Playfair Display', serif;
+  letter-spacing: -0.035em;
+}
+
+.location {
+  color: var(--muted);
+  margin: 6px 0 0;
+  font-size: 12px;
+}
+
+.bio-label {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 9px;
+  color: var(--ink);
+  font-size: 9px;
+}
+
+.bio-label span {
+  color: var(--muted);
+}
+
+.bio-box {
+  height: 124px;
+  overflow: auto;
+  padding: 14px 15px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--tint);
+  scrollbar-color: var(--accent) transparent;
+  scrollbar-width: thin;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #4c4c46;
+}
+
+.bio-box p {
+  margin: 0 0 13px;
+}
+
+.bio-box p:last-child {
+  margin-bottom: 0;
+}
+
+.bio-box:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 19px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 8px;
+}
+
+.card-footer a {
+  color: var(--accent);
+}
+
+.lesson {
+  margin: 124px 0 92px;
+  padding: 43px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 38px;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: #eeece5;
+}
+
+.lesson h2 {
+  font-size: clamp(34px, 4vw, 48px);
+}
+
+.lesson p:not(.eyebrow) {
+  max-width: 390px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.lesson code {
+  color: #bb5a47;
+  font-size: 12px;
+}
+
+.box-diagram {
+  padding: 18px;
+}
+
+.box-layer {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font: 500 9px 'DM Mono', monospace;
+  letter-spacing: 0.08em;
+}
+
+.box-margin {
+  min-height: 200px;
+  padding: 11px;
+  color: #77796f;
+  background: #e7c878;
+  border: 1px dashed #ae9250;
+}
+
+.box-border {
+  width: 100%;
+  height: 100%;
+  padding: 13px;
+  color: #f7f5ee;
+  background: #7c8790;
+}
+
+.box-padding {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  color: #77796f;
+  background: #dce8d7;
+}
+
+.box-content {
+  width: 100%;
+  min-height: 67px;
+  display: grid;
+  place-items: center;
+  color: #233323;
+  background: #f9faf5;
+  border: 1px solid #bbcbb5;
+}
+
+.page-footer {
+  padding: 22px 0 28px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.add-button {
+  position: fixed;
+  z-index: 20;
+  right: clamp(20px, 5vw, 68px);
+  bottom: 26px;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: #e36f56;
+  box-shadow: 0 8px 24px rgba(166, 75, 55, 0.3);
+  font: 300 32px/1 'DM Sans', sans-serif;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.add-button:hover {
+  transform: rotate(90deg);
+  background: #c85c46;
+}
+
+@media (max-width: 720px) {
+  .profiles {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .lesson {
+    grid-template-columns: 1fr;
+    padding: 28px;
+    gap: 10px;
+    margin: 78px 0 60px;
+  }
+
+  .box-diagram {
+    padding: 4px 0;
+  }
+
+  .intro {
+    padding-top: 72px;
+  }
+}
+
+@media (max-width: 420px) {
+  .page-shell {
+    width: calc(100% - 28px);
+  }
+
+  .top-bar {
+    height: 60px;
+    padding: 0 16px;
+  }
+
+  .top-bar nav {
+    gap: 15px;
+    font-size: 11px;
+  }
+
+  .profile-card {
+    padding: 19px;
+  }
+
+  .identity h2 {
+    font-size: 24px;
+  }
+
+  .card-footer {
+    font-size: 7px;
+  }
+
+  .box-margin {
+    min-height: 175px;
+  }
+}

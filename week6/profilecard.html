@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile Cards | Week 6</title>
+  <link rel="stylesheet" href="card.css">
+</head>
+<body>
+  <header class="top-bar">
+    <a class="brand" href="#home">People<span>space</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#profiles">Profiles</a>
+      <a href="#box-model">Box model</a>
+    </nav>
+  </header>
+
+  <main id="home" class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">WEEK 6 · CSS PRACTICE</p>
+      <h1 id="page-title">A little space to<br>meet someone.</h1>
+      <p class="intro-copy">
+        Profile cards made with the CSS box model, overflow, and positioning.
+      </p>
+    </section>
+
+    <section id="profiles" class="profiles" aria-label="Profile cards">
+      <article class="profile-card profile-card--coral">
+        <div class="card-topline">
+          <span class="status-dot"></span>
+          AVAILABLE FOR COLLABS
+          <span class="card-number">01 / 02</span>
+        </div>
+
+        <div class="identity">
+          <img
+            class="avatar"
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=320&q=85"
+            alt="Portrait of Maya Chen"
+          >
+          <div>
+            <p class="role">PRODUCT DESIGNER</p>
+            <h2>Maya Chen</h2>
+            <p class="location">Brooklyn, New York</p>
+          </div>
+        </div>
+
+        <p class="bio-label">A LITTLE ABOUT ME <span>↘ SCROLL</span></p>
+        <div class="bio-box" tabindex="0" aria-label="Scrollable biography for Maya Chen">
+          <p>
+            I’m a product designer who loves turning complicated ideas into
+            calm, clear experiences. For the past six years, I’ve worked with
+            small teams to make tools that feel thoughtful and human.
+          </p>
+          <p>
+            Outside of work, you’ll usually find me collecting cookbooks,
+            taking the long way home, or trying to keep my balcony garden
+            alive. Lately I’ve been learning ceramics and making very uneven bowls.
+          </p>
+          <p>
+            I’m always happy to talk about accessible design, creative routines,
+            and the best neighborhood noodles. Say hello if you’re building something kind.
+          </p>
+        </div>
+
+        <div class="card-footer">
+          <span>DESIGN · CULTURE · FOOD</span>
+          <a href="mailto:maya@example.com">SAY HELLO ↗</a>
+        </div>
+      </article>
+
+      <article class="profile-card profile-card--blue">
+        <div class="card-topline">
+          <span class="status-dot"></span>
+          OPEN TO NEW PROJECTS
+          <span class="card-number">02 / 02</span>
+        </div>
+
+        <div class="identity">
+          <img
+            class="avatar"
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=320&q=85"
+            alt="Portrait of Jordan Lee"
+          >
+          <div>
+            <p class="role">FRONT-END DEVELOPER</p>
+            <h2>Jordan Lee</h2>
+            <p class="location">Portland, Oregon</p>
+          </div>
+        </div>
+
+        <p class="bio-label">A LITTLE ABOUT ME <span>↘ SCROLL</span></p>
+        <div class="bio-box" tabindex="0" aria-label="Scrollable biography for Jordan Lee">
+          <p>
+            I’m a front-end developer who cares about the details people feel,
+            even when they don’t see them. I enjoy building fast, accessible
+            interfaces and working closely with designers.
+          </p>
+          <p>
+            When I close my laptop, I’m probably out on a trail, fixing an old
+            film camera, or making a playlist for a road trip. I believe a good
+            walk can solve at least half of most problems.
+          </p>
+          <p>
+            Currently exploring creative coding and tiny web projects. I love
+            swapping notes about CSS, independent music, and places to get a good cup of tea.
+          </p>
+        </div>
+
+        <div class="card-footer">
+          <span>CODE · TRAILS · MUSIC</span>
+          <a href="mailto:jordan@example.com">SAY HELLO ↗</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="box-model" class="lesson" aria-labelledby="lesson-title">
+      <div>
+        <p class="eyebrow">6.1 · THE BOX MODEL</p>
+        <h2 id="lesson-title">Every element<br>takes up space.</h2>
+        <p>
+          Each profile card uses <code>box-sizing: border-box</code>, so its
+          declared width includes padding and border. The diagram shows the
+          layers from the outside in.
+        </p>
+      </div>
+
+      <div
+        class="box-diagram"
+        role="img"
+        aria-label="Box model diagram: margin surrounds border, which surrounds padding, which surrounds content"
+      >
+        <div class="box-layer box-margin">
+          MARGIN
+          <div class="box-layer box-border">
+            BORDER
+            <div class="box-layer box-padding">
+              PADDING
+              <div class="box-content">CONTENT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <span>PROFILE CARD STUDY</span>
+      <span>HTML + CSS · 2026</span>
+    </footer>
+  </main>
+
+  <a class="add-button" href="#profiles" aria-label="Jump to profile cards">+</a>
+</body>
+</html>
