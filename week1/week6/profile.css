@@ -1,0 +1,177 @@
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #333;
+}
+
+/* 6.4 Sticky Top Bar */
+.topbar {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.topbar h1 {
+    margin-bottom: 5px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+/* 6.1 Box Model and 6.2 Profile Card */
+.profile-card {
+    width: 280px;
+    padding: 25px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Blue Card */
+.card-blue {
+    border-color: #2563eb;
+}
+
+/* Pink Card */
+.card-pink {
+    border-color: #db2777;
+}
+
+/* Green Card */
+.card-green {
+    border-color: #15803d;
+}
+
+/* Circle Avatar */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #2563eb;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card-pink .avatar {
+    border-color: #db2777;
+}
+
+.card-green .avatar {
+    border-color: #15803d;
+}
+
+/* Profile Heading */
+.profile-card h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #172554;
+}
+
+.profile-card h3 {
+    font-size: 16px;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+/* 6.3 Scrollable Bio */
+.bio {
+    height: 110px;
+    overflow: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.bio p {
+    margin-bottom: 12px;
+}
+
+/* Profile Button */
+.profile-btn {
+    margin-top: 18px;
+    padding: 10px 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card-pink .profile-btn {
+    background-color: #db2777;
+}
+
+.card-green .profile-btn {
+    background-color: #15803d;
+}
+
+.profile-btn:hover {
+    opacity: 0.8;
+}
+
+/* 6.4 Fixed Floating Button */
+.floating-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: white;
+    font-size: 35px;
+    border: none;
+
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    z-index: 200;
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.floating-btn:hover {
+    background-color: #172554;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .topbar h1 {
+        font-size: 24px;
+    }
+}

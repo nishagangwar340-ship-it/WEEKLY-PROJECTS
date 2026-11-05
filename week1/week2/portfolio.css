@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #172554;
+    padding: 20px 8%;
+    color: white;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+/* Home */
+.home {
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    background: #dbeafe;
+}
+
+.home-content h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.home-content h1 span {
+    color: #2563eb;
+}
+
+.home-content h2 {
+    margin-bottom: 15px;
+    color: #172554;
+}
+
+.home-content p {
+    font-size: 17px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #172554;
+}
+
+/* Common Sections */
+section:not(.home) {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 30px;
+    color: #172554;
+    margin-bottom: 25px;
+}
+
+/* About */
+#about p {
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* Skills */
+.skill-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-box div {
+    background: #2563eb;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 6px;
+}
+
+/* Projects */
+.project-box {
+    background: white;
+    padding: 25px;
+    margin: 15px auto;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px #ccc;
+}
+
+.project-box h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    line-height: 1.6;
+}
+
+/* Contact */
+#contact {
+    background: #dbeafe;
+}
+
+#contact p {
+    margin: 12px;
+}
+
+/* Footer */
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home-content h1 {
+        font-size: 28px;
+    }
+}

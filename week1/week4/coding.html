@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Coding Club Website">
+    <title>Coding Club - Week 5</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="coding.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Coding Club</h1>
+        <p>Learn Coding | Build Projects | Explore Technology</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h2>Welcome to Coding Club!</h2>
+        <p>
+            Learn programming, develop skills and
+            create amazing projects with us.
+        </p>
+        <a href="#register" class="btn">Join Now</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="card">
+        <h2>About Us</h2>
+        <p>
+            Coding Club is a student community where
+            students learn programming and technology.
+            Our aim is to improve coding skills and
+            encourage creativity.
+        </p>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="card">
+        <h2>Upcoming Events</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>HTML Workshop</td>
+                    <td>10 November 2026</td>
+                    <td>10 AM</td>
+                </tr>
+
+                <tr>
+                    <td>CSS Competition</td>
+                    <td>15 November 2026</td>
+                    <td>11 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Java Coding</td>
+                    <td>20 November 2026</td>
+                    <td>12 PM</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total Events: 3</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="card">
+        <h2>Registration Form</h2>
+
+        <form action="#" method="post">
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name"
+            placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+            placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+            placeholder="Enter password" required>
+
+            <label for="date">Date of Birth:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"
+            placeholder="Enter phone number">
+
+            <p>Gender:</p>
+
+            <div class="options">
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+
+            <p>Choose Your Skills:</p>
+
+            <div class="options">
+                <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+                <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+                <label><input type="checkbox" name="skills" value="Java"> Java</label>
+            </div>
+
+            <label for="course">Select Course:</label>
+
+            <select id="course" name="course">
+                <option value="">Choose Course</option>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>Java</option>
+                <option>Web Development</option>
+            </select>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message"
+            rows="5" placeholder="Write your message"></textarea>
+
+            <button type="submit">Submit Registration</button>
+
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="card">
+        <h2>Contact Us</h2>
+        <p>Email: nishagangwar340@gmail.com</p>
+        <p>Phone: 9761400288</p>
+        <p>Location: Uttar Pradesh, India</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Coding Club | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+/* 5.4 CSS Variables */
+:root {
+    --primary-color: #172554;
+    --secondary-color: #2563eb;
+    --background-color: #eff6ff;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #facc15;
+
+    --spacing: 20px;
+    --border-radius: 10px;
+}
+
+/* 5.2 Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* 5.2 Element Selector */
+h1 {
+    font-size: 36px;
+    color: var(--card-color);
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--card-color);
+    text-align: center;
+    padding: 35px;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* 5.2 ID Selector */
+#hero {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+#hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+#hero p {
+    margin-bottom: 25px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: white;
+}
+
+/* 5.2 Class Selector */
+.card {
+    background-color: var(--card-color);
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--background-color);
+}
+
+tfoot {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > label {
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 14px;
+    }
+
+    .card {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    #hero h2 {
+        font-size: 24px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 7px;
+    }
+}
